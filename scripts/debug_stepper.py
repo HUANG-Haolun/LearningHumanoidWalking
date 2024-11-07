@@ -5,9 +5,10 @@ import torch
 import pickle
 import mujoco
 import numpy as np
+import sys
+sys.path.append(r'C:\Users\77188\Documents\111works!\LearningHumanoidWalking')
 import transforms3d as tf3
 from run_experiment import import_env
-
 def print_reward(ep_rewards):
     mean_rewards = {k:[] for k in ep_rewards[-1].keys()}
     print('*********************************')

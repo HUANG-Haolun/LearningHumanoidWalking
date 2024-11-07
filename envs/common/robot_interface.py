@@ -377,6 +377,8 @@ class RobotInterface(object):
             if geom1_is_robot and geom2_is_robot:
                 return True
         return False
+    def get_pd_target(self):  ## this line is added
+        return [self.current_pos_target, self.current_vel_target]  ## this line is added
 
     def set_pd_gains(self, kp, kv):
         assert kp.size==self.model.nu
